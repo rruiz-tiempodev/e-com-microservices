@@ -1,0 +1,33 @@
+get userByUsername
+get rolesByUser
+get allRoles
+get allPermissions
+get allBermissionsByRoleId
+get roleById
+
+Users
+HASH                    SORT_KEY          
+USER                    rruiz@gmail.com       
+
+Access Pattern
+getUserByUsername: SELECT by hast where id = 'USER' and sortkey = 'rruiz@gmail.com'
+
+
+UserRole
+HASH                        SORT_KEY
+USER_ROLE                   rruiz@gmail.com:admin
+USER_ROLE                   rruiz@gmail.com:user
+get rolesByUser: SELECT by hash where id = 'USER_ROLE' and sortkey starts with 'rruiz@gmail.com:'
+
+
+roles
+HASH                    SORT_KEY
+ROLE                    admin
+get allRoles: SELECT by hash where id = 'ROLE'
+
+
+
+
+permissions
+HASH                SORT_KEY
+PERMISSION          canDoStuff
