@@ -6,7 +6,7 @@
 .settings/*
 # Log file
 *.log
-
+data/*
 # BlueJ files
 *.ctxt
 
