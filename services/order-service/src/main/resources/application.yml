@@ -1,12 +1,13 @@
 server:
-  port: 9095
+  port: 9094
 spring:
   zipkin:
     baseUrl: http://localhost:9411
   application:
-    name: user-service
+    name: order-service
 stream:
-  key: user-stream
+  key: order-stream
   user:
+    key: user-stream
     group:
       name: user-group

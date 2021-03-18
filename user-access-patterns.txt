@@ -31,3 +31,6 @@ get allRoles: SELECT by hash where id = 'ROLE'
 permissions
 HASH                SORT_KEY
 PERMISSION          canDoStuff
+
+
+XGROUP CREATE user-stream user-group $ MKSTREAM

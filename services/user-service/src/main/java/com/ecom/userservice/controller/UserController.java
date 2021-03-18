@@ -11,14 +11,14 @@ import com.ecom.userservice.service.UserService;
 
 @RestController
 @RequestMapping("/users")
-public class UserServiceController {
+public class UserController {
 	
 	@Autowired
 	private UserService userService;
 	
 	@PostMapping(consumes = {"application/json"})
 	@ResponseBody
-	public ResponseEntity<Void> createUser() {
+	public ResponseEntity<Void> createUser() throws Exception {
 		userService.createUser();
 		return ResponseEntity.ok().build();
 	}
