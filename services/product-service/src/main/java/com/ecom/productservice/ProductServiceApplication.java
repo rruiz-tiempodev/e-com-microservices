@@ -1,4 +1,4 @@
-package com.ecom.userservice;
+package com.ecom.productservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +14,8 @@ import com.ecom.common.config.StreamConfig;
 		JsonConfig.class,
 		CommonServiceConfig.class
 })
-public class UserServiceApplication {
-
+public class ProductServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(UserServiceApplication.class, args);
+		SpringApplication.run(ProductServiceApplication.class, args);
 	}
-
 }

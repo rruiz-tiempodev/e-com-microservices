@@ -13,6 +13,8 @@
 		<module>user-service</module>
 
 		<module>order-service</module>
+		<module>product-service</module>
+		<module>algolia-service</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

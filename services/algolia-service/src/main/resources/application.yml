@@ -1,0 +1,16 @@
+server:
+  port: 9096
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411
+  application:
+    name: algolia-service
+stream:
+  product:
+    key: product-stream
+    group:
+      name: algolia-product-group
+algolia:
+  appId: V13X6PDFWH
+  appKey: 13a4cda2cdd4c77c12cf9fca88ea5ffb
+  productIndexName: products
