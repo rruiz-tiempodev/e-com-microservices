@@ -10,4 +10,8 @@ stream:
   user:
     key: user-stream
     group:
-      name: user-group
+      name: order-user-group
+  product:
+    key: product-stream
+    group:
+      name: order-product-group

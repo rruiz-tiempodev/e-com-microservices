@@ -7,12 +7,14 @@ import org.springframework.context.annotation.Import;
 import com.ecom.common.config.CommonServiceConfig;
 import com.ecom.common.config.JsonConfig;
 import com.ecom.common.config.StreamConfig;
+import com.ecom.productservice.config.ServiceConfig;
 
 @SpringBootApplication
 @Import(value = {
 		StreamConfig.class,
 		JsonConfig.class,
-		CommonServiceConfig.class
+		CommonServiceConfig.class,
+		ServiceConfig.class
 })
 public class ProductServiceApplication {
 	public static void main(String[] args) {

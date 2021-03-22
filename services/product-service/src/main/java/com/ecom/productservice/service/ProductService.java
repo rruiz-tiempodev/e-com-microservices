@@ -1,6 +1,5 @@
 package com.ecom.productservice.service;
 
-import java.math.BigDecimal;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.util.UUID;
@@ -22,10 +21,10 @@ public class ProductService {
 	@Autowired
 	private StreamService streamService;
 	
-	public String createProduct() throws Exception {
-		ZonedDateTime now = ZonedDateTime.now(ZoneOffset.UTC);
-		Product product = Product.builder().id(UUID.randomUUID().toString()).ts(now).name("Producto prueba").price(new BigDecimal("50.00")).build();
-		ProductEvent productEvent = ProductEvent.builder().newImage(product).type(EventType.CREATE).build();
+	public String createProduct(Product product) throws Exception {
+		ZonedDateTime now = ZonedDateTime.now(ZoneOffset.UTC);		
+		Product productToSave = Product.builder().id(UUID.randomUUID().toString()).ts(now).name(product.getName()).price(product.getPrice()).build();		
+		ProductEvent productEvent = ProductEvent.builder().newImage(productToSave).type(EventType.CREATE).build();
 		streamService.addObjectToStream(productEvent, streamKey);
 		return product.getId();
 	}

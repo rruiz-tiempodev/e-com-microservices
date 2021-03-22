@@ -12,5 +12,5 @@ stream:
       name: algolia-product-group
 algolia:
   appId: V13X6PDFWH
-  appKey: 13a4cda2cdd4c77c12cf9fca88ea5ffb
+  appKey: 884d2475a4d4b764eaa2d81a2dfb1a8a
   productIndexName: products
