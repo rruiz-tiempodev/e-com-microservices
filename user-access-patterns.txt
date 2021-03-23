@@ -36,3 +36,8 @@ PERMISSION          canDoStuff
 XGROUP CREATE user-stream user-user-group $ MKSTREAM
 XGROUP CREATE product-stream algolia-product-group $ MKSTREAM
 XGROUP CREATE product-stream order-product-group $
+
+
+product
+getAllProducts
+getProductById

@@ -7,3 +7,8 @@ spring:
     name: product-service
 stream:
   key: product-stream
+aws:
+  region: us-east-1
+  dynamo:
+    tableName: Product
+    endpoint: http://localhost:443

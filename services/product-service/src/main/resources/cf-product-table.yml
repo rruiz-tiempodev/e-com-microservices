@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources: 
+  ProductDynamoTable: 
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      TableName: Product
+      AttributeDefinitions:
+        - 
+          AttributeName: id
+          AttributeType: S
+        -
+          AttributeName: ts
+          AttributeType: S
+        -
+          AttributeName: name
+          AttributeType: S
+      KeySchema: 
+        - 
+          AttributeName: id
+          KeyType: HASH
+        - 
+          AttributeName: ts
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        -
+          IndexName: name-idx
+          KeySchema:
+            - 
+              AttributeName: name
+              KeyType: HASH            
+          Projection:
+            ProjectionType: KEYS_ONLY
+      BillingMode: PAY_PER_REQUEST
